@@ -16,7 +16,7 @@
         <br>
         {% if short_url|length >7 %}
         <input name= "shortened_URL" class="input_text" type ="text" id="short_url" readonly value={{short_url}}>
-        <input name=copyButton type="submit" style="background-color: rgb(97, 97, 221); width: 70px;margin-top: 10px;" id="shortener_button" value="Copy"></button>
+        <Button name=copyButton type="submit" style="background-color: rgb(97, 97, 221); width: 70px;margin-top: 10px;" id="copyButton" value="Copy">Copy</button>
         {%endif%}
     </form>
     <br>
@@ -30,4 +30,13 @@
     
 
 </body>
+<script type="text/javascript">
+const copyButton = document.getElementById("copyButton")
+const linkToBeCopied = document.getElementById("short_url")
+
+copyButton.onclick = function () {
+    linkToBeCopied.select()
+    document.execCommand("Copy")
+}
+</script>
 </html>

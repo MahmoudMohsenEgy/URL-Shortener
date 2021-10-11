@@ -49,7 +49,7 @@ def index():
         elif request.form.get("copyButton"):
             original_url = str(request.form['original_url'])
             short_url=str(request.form["shortened_URL"])
-            pyperclip.copy(str(request.form["shortened_URL"]))
+            #pyperclip.copy(str(request.form["shortened_URL"]))
     
     return render_template('homepage.html',short_url = short_url,original_url=original_url)
 @app.route('/about')
