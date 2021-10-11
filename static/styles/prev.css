@@ -1,0 +1,26 @@
+.table {
+    border: 1px solid black;
+    width: 100%;
+    border-spacing: 5px;
+    background-color: rgb(255, 255, 255);
+
+}
+table tr th{
+    background-color: rgb(236, 232, 232);
+}
+table tr td{
+    font-size: small;
+}
+table caption {
+  font-size: 20px;
+  margin: .5em 0 .75em;
+}
+[id=newURL] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 10px;
+}

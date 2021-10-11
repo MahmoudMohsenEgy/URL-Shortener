@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/homepage.css') }}">
+    <title>URL Shortner</title>
+</head>
+<body align='center' style="background-color: rgb(157, 224, 245);">
+    <dev id='shortner_dev'>
+    <h1 style="font-family:Georgia, 'Times New Roman', Times, serif;">URL Shortener </h1>
+    <form method="POST">
+        <input class="input_text" type="text" id="original_url" name="original_url" value={{original_url}}>
+        <input name=shortenerButton class='button' type='submit' style="background-color: rgb(97, 97, 221);width: 70px;margin-top: 25px;" id="shortener_button" value="Shorten"></button>
+        <br>
+        {% if short_url|length >7 %}
+        <input name= "shortened_URL" class="input_text" type ="text" id="short_url" readonly value={{short_url}}>
+        <input name=copyButton type="submit" style="background-color: rgb(97, 97, 221); width: 70px;margin-top: 10px;" id="shortener_button" value="Copy"></button>
+        {%endif%}
+    </form>
+    <br>
+    <a id= prevGen href='prevURLs'>Previous generated URLs</a>
+    </dev>
+    <br>
+    <footer class=footer>
+    <a href='about'>about us</a>
+
+    </footer>
+    
+
+</body>
+</html>

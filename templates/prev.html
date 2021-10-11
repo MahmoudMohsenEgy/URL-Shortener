@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/prev.css') }}">
+    <title>Previous URLs Generated</title>
+</head>
+<body style="background-color: rgb(157, 224, 245);">
+    
+    <table class= table border="2">
+        <caption>Previous urls generated</caption>
+        <tr>
+            <th>No.</th>
+            <th>Shortened URL</th>
+            <th>Original URL</th>
+        </tr>
+        {% for url in past_urls %}
+        <tr>
+            
+            <td>{{loop.index}}</td>
+            <td>{{url.shortURL}}</td>
+            <td>{{url.originalURL}}</td>
+            <td>
+                <form method="POST">
+                <input type="submit" name="deleteButton" data-status={{url.shortURL}} value="Delete">
+                <input hidden type="submit" name="deleteButton" data-status={{url.shortURL}} value="Delete">
+                <input type="hidden"  name="shortURL" value={{url.shortURL}}>
+                </form>
+            </td>
+        </tr>
+        {%endfor%}
+        
+    </table>
+</form>
+<br>
+<a id="newURL" href='/'>Shorten new URL by clicking here!</a>
+<br>
+
+</body>
+</html>
