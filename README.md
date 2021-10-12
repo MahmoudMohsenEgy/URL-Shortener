@@ -6,4 +6,4 @@ The encoder works with 2 different ways:
 2. Incrementation of a base ID
 
 ### Give it a try:
-> https://xyurl.herokuapp.com/
+> <a href="https://xyurl.herokuapp.com/" target="_blank">https://xyurl.herokuapp.com/</a>
